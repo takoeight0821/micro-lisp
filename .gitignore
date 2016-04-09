@@ -1,16 +1,35 @@
-dist
-cabal-dev
-*.o
-*.hi
-*.chi
-*.chs.h
-*.dyn_o
-*.dyn_hi
-.hpc
-.hsenv
-.cabal-sandbox/
-cabal.sandbox.config
-*.prof
-*.aux
-*.hp
-.stack-work/
+### https://raw.github.com/github/gitignore/a392c48ccf4136ef75acb05b7ead4e9c75235c19/CommonLisp.gitignore
+
+*.FASL
+*.fasl
+*.lisp-temp
+
+
+### https://raw.github.com/github/gitignore/a392c48ccf4136ef75acb05b7ead4e9c75235c19/Global/OSX.gitignore
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
