@@ -1,0 +1,78 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d406795303987c099e9f706b9fdbc95fff4e2cad1744958ac9f63f065fb8adb4
+
+name:           micro-lisp
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/takoeight0821/micro-lisp#readme>
+homepage:       https://github.com/takoeight0821/micro-lisp#readme
+bug-reports:    https://github.com/takoeight0821/micro-lisp/issues
+author:         Yuya Kono
+maintainer:     takohati0821@gmail.com
+copyright:      2020 Yuya Kono
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/takoeight0821/micro-lisp
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_micro_lisp
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wno-name-shadowing -j4 +RTS -A128m -n2m -qg -RTS -fwrite-ide-info -hiedir=.hie
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , lens
+    , megaparsec
+    , mtl
+    , transformers
+  default-language: Haskell2010
+
+executable micro-lisp-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_micro_lisp
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wno-name-shadowing -j4 +RTS -A128m -n2m -qg -RTS -fwrite-ide-info -hiedir=.hie -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , lens
+    , megaparsec
+    , micro-lisp
+    , mtl
+    , transformers
+  default-language: Haskell2010
+
+test-suite micro-lisp-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_micro_lisp
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wno-name-shadowing -j4 +RTS -A128m -n2m -qg -RTS -fwrite-ide-info -hiedir=.hie -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , lens
+    , megaparsec
+    , micro-lisp
+    , mtl
+    , transformers
+  default-language: Haskell2010
